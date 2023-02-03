@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contoh html</title>
+</head>
+<body>
+	<h2>ubah data</h2>
+	<h5>Muhammad Ilham Z</h5>
+	<form action=" {{ url_for('update_process')}} " method="post">
+		nama: <br>
+		<input type="text" name="nama" size="20" maxlength="20" value=" {{data[1]}} " ><br>
+		nim : <br>
+		<input type="text" name="nim" size="20" maxlength="20"  value=" {{data[2]}} "><br>
+		prodi : <br>
+		<input type="text" name="prodi" size="20" maxlength="20"  value=" {{data[3]}} "><br>
+		fakultas : <br>
+		<input type="text" name="fakultas" size="20" maxlength="20"  value=" {{data[4]}} "><br>
+		<input type="hidden" name="no" value=" {{ data[0]}} ">
+		<p><input type="submit" value="simpan" ></p><br>
+	</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>insert</title>
+</head>
+<body>
+	<h1>tambah data</h1>
+	<h5>Muhammad llham</h5>
+	<form action="{{ url_for('insert') }} " method="post">
+		nama: <br>
+		<input type="text" name="nama" size="20" maxlength="20" ><br>
+		nim : <br>
+		<input type="text" name="nim" size="20" maxlength="20"><br>
+		prodi : <br>
+		<input type="text" name="prodi" size="20" maxlength="20"><br>
+		fakultas : <br>
+		<input type="text" name="fakultas" size="20" maxlength="20"><br>
+
+		<p><input type="submit" value="simpan"></p><br>
+		
+	</form>
+</body>
+</html>

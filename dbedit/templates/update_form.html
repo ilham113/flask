@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contoh html</title>
+</head>
+<body>
+	<h2>ubah data</h2>
+	<h5>Muhammad Ilham Z</h5>
+	<form action=" {{ url_for('update_process')}} " method="post">
+		nama: <br>
+		<input type="text" name="nama" value=" {{ data[1]}} " size="20" maxlength="20"><br>
+		No Telp :<br>
+		<input type="text" name="no_telp" size="20" maxlength="20" value=" {{ data[2]}} "><br>
+		<input type="hidden" name="no" value=" {{ data[0]}} ">
+		<p><input type="submit" value="simpan" ></p><br>
+	</form>
+</body>
+</html>
