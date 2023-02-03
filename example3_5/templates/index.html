@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>template ke-5</title>
+</head>
+<body>
+	<h2>template ke 5</h2>
+	<h5>Muhammad Ilham </h5>
+	<ul>
+		{% for elemen in navigasi %}
+			<li><a href="{{ elemen[0]}}">{{ elemen[1]}}</a></li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
