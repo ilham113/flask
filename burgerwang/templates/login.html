@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='staticlogin/theme.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='staticlogin/jquery-ui.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='staticlogin/jquery.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='staticlogin/homeslider.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" href="{{url_for('static', filename='staticlogin/custom.css') }}" type="text/css" media="all">
+
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/core.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/theme.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/eicaptcha-contact-form.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/jquery-ui.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/responsiveslides.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/homeslider.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/ps_searchbar.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/ps_shoppingcart.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='staticlogin/custom.js') }}"></script>
+    <title>Login</title>
+</head>
+<body id="page-authentication" class="lang-en country-id currency-idr layout-full-width page-authentication tax-display-enabled page-customer-account" >
+    
+	<main>
+        <aside id="notifications">
+            <div class="container"></div>
+        </aside>
+        <section id="wrapper">
+            <div class="container">
+                <!--nav data-depth="2" class="breadcrumb hidden-sm-down">
+                    <ol>
+                        <li itemprop="itemListElement">
+                            <a itemprop="item" href="">
+                                <span itemprop="name">Home</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                        </li>
+                        <li itemprop="itemListElement">
+                            <a itemprop="item" href="{{ url_for('index') }}">
+                                <span itemprop="name">Login</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                        </li>
+                    </ol>
+                </nav-->
+                <div id="content-wrapper">
+                    <section id="main">
+                        <header class="page-header">
+                            <h1>Log in dengan Akun Anda</h1>
+                        </header>
+                        <section id="content" class="page-content card card-block">
+                            <section class="login-form">
+                                <form id="login-form" action="{{ url_for('login') }}" method="post" >
+                                    <section>
+                                        <input type="hidden" name="back" value="my-account">
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Username</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="username" type="text">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment">
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Password</label>
+                                            <div class="col-md-6">
+                                                <div class="input-group js-parent-focus">
+                                                    <input class="form-control js-child-focus js-visible-password" name="password" type="password" value="" pattern=".{5,}" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 form-control-comment">
+                                                
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <br>
+                                    <footer class="form-footer text-xs-center clearfix">
+                                        <input type="hidden" name="submitLogin" value="1">
+										<button class="btn btn-primary" data-link-action="sign-in" type="submit">Sign in</button>
+										{% if msg %}
+										<p style="color : red"> {{ msg }}</p>
+										{% endif %}
+                                    </footer>
+                                </form>
+                            </section>
+                            <hr>
+                            <div class="no-account" align="center">
+                                <a href="{{ url_for('buat_akun') }}">Belum punya Akun? Segera buat disini</a>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

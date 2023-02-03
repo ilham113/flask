@@ -1,0 +1,2868 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/font-awesome/fontawesome-webfont.eot");
+  src: url("fonts/font-awesome/fontawesome-webfont.eot") format("embedded-opentype"),
+  url("fonts/font-awesome/fontawesome-webfont.woff2") format("woff2"),
+  url("fonts/font-awesome/fontawesome-webfont.woff") format("woff"),
+  url("fonts/font-awesome/fontawesome-webfont.ttf") format("truetype"),
+  url("fonts/font-awesome/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon, [class^="icon-"] {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.icon-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.icon-2x {
+  font-size: 2em;
+}
+
+.icon-3x {
+  font-size: 3em;
+}
+
+.icon-4x {
+  font-size: 4em;
+}
+
+.icon-5x {
+  font-size: 5em;
+}
+
+.icon-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+
+.icon-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+
+.icon-ul > li {
+  position: relative;
+}
+
+.icon-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+
+.icon-li.icon-lg {
+  left: -1.85714286em;
+}
+
+.icon-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+}
+
+.icon-pull-left {
+  float: left;
+}
+
+.icon-pull-right {
+  float: right;
+}
+
+.icon.icon-pull-left, .icon-pull-left[class^="icon-"] {
+  margin-right: .3em;
+}
+
+.icon.icon-pull-right, .icon-pull-right[class^="icon-"] {
+  margin-left: .3em;
+}
+
+/* Deprecated as of 4.4.0 */
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.icon.pull-left, .pull-left[class^="icon-"] {
+  margin-right: .3em;
+}
+
+.icon.pull-right, .pull-right[class^="icon-"] {
+  margin-left: .3em;
+}
+
+.icon-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+.icon-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.icon-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.icon-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.icon-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+:root .icon-rotate-90,
+:root .icon-rotate-180,
+:root .icon-rotate-270,
+:root .icon-flip-horizontal,
+:root .icon-flip-vertical {
+  filter: none;
+}
+
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.icon-stack-1x, .icon-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.icon-stack-1x {
+  line-height: inherit;
+}
+
+.icon-stack-2x {
+  font-size: 2em;
+}
+
+.icon-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.icon-glass:before {
+  content: "ï€€";
+}
+
+.icon-music:before {
+  content: "ï€";
+}
+
+.icon-search:before {
+  content: "ï€‚";
+}
+
+.icon-envelope-o:before, .icon-envelope-alt:before {
+  content: "ï€ƒ";
+}
+
+.icon-heart:before {
+  content: "ï€„";
+}
+
+.icon-star:before {
+  content: "ï€…";
+}
+
+.icon-star-o:before, .icon-star-empty:before {
+  content: "ï€†";
+}
+
+.icon-user:before {
+  content: "ï€‡";
+}
+
+.icon-film:before {
+  content: "ï€ˆ";
+}
+
+.icon-th-large:before {
+  content: "ï€‰";
+}
+
+.icon-th:before {
+  content: "ï€Š";
+}
+
+.icon-th-list:before {
+  content: "ï€‹";
+}
+
+.icon-check:before {
+  content: "ï€Œ";
+}
+
+.icon-remove:before,
+.icon-close:before,
+.icon-times:before,
+.icon-remove:before {
+  content: "ï€";
+}
+
+.icon-search-plus:before, .icon-zoom-in:before {
+  content: "ï€Ž";
+}
+
+.icon-search-minus:before, .icon-zoom-out:before {
+  content: "ï€";
+}
+
+.icon-power-off:before, .icon-off:before {
+  content: "ï€‘";
+}
+
+.icon-signal:before {
+  content: "ï€’";
+}
+
+.icon-gear:before,
+.icon-cog:before {
+  content: "ï€“";
+}
+
+.icon-trash-o:before, .icon-trash:before {
+  content: "ï€”";
+}
+
+.icon-home:before {
+  content: "ï€•";
+}
+
+.icon-file-o:before, .icon-file-alt:before {
+  content: "ï€–";
+}
+
+.icon-clock-o:before, .icon-time:before {
+  content: "ï€—";
+}
+
+.icon-road:before {
+  content: "ï€˜";
+}
+
+.icon-download:before, .icon-download-alt:before {
+  content: "ï€™";
+}
+
+.icon-arrow-circle-o-down:before, .icon-download:before, .icon-download-alt:before {
+  content: "ï€š";
+}
+
+.icon-arrow-circle-o-up:before, .icon-upload:before, .icon-upload-alt:before {
+  content: "ï€›";
+}
+
+.icon-inbox:before {
+  content: "ï€œ";
+}
+
+.icon-play-circle-o:before, .icon-play-circle:before, .icon-play-sign:before {
+  content: "ï€";
+}
+
+.icon-rotate-right:before,
+.icon-repeat:before {
+  content: "ï€ž";
+}
+
+.icon-refresh:before {
+  content: "ï€¡";
+}
+
+.icon-list-alt:before {
+  content: "ï€¢";
+}
+
+.icon-lock:before {
+  content: "ï€£";
+}
+
+.icon-flag:before {
+  content: "ï€¤";
+}
+
+.icon-headphones:before {
+  content: "ï€¥";
+}
+
+.icon-volume-off:before {
+  content: "ï€¦";
+}
+
+.icon-volume-down:before {
+  content: "ï€§";
+}
+
+.icon-volume-up:before {
+  content: "ï€¨";
+}
+
+.icon-qrcode:before {
+  content: "ï€©";
+}
+
+.icon-barcode:before {
+  content: "ï€ª";
+}
+
+.icon-tag:before {
+  content: "ï€«";
+}
+
+.icon-tags:before {
+  content: "ï€¬";
+}
+
+.icon-book:before {
+  content: "ï€­";
+}
+
+.icon-bookmark:before {
+  content: "ï€®";
+}
+
+.icon-print:before {
+  content: "ï€¯";
+}
+
+.icon-camera:before {
+  content: "ï€°";
+}
+
+.icon-font:before {
+  content: "ï€±";
+}
+
+.icon-bold:before {
+  content: "ï€²";
+}
+
+.icon-italic:before {
+  content: "ï€³";
+}
+
+.icon-text-height:before {
+  content: "ï€´";
+}
+
+.icon-text-width:before {
+  content: "ï€µ";
+}
+
+.icon-align-left:before {
+  content: "ï€¶";
+}
+
+.icon-align-center:before {
+  content: "ï€·";
+}
+
+.icon-align-right:before {
+  content: "ï€¸";
+}
+
+.icon-align-justify:before {
+  content: "ï€¹";
+}
+
+.icon-list:before {
+  content: "ï€º";
+}
+
+.icon-dedent:before,
+.icon-outdent:before,
+.icon-indent-left:before {
+  content: "ï€»";
+}
+
+.icon-indent:before, .icon-indent-right:before {
+  content: "ï€¼";
+}
+
+.icon-video-camera:before, .icon-facetime-video:before {
+  content: "ï€½";
+}
+
+.icon-photo:before,
+.icon-image:before,
+.icon-picture-o:before,
+.icon-picture:before {
+  content: "ï€¾";
+}
+
+.icon-pencil:before {
+  content: "ï€";
+}
+
+.icon-map-marker:before {
+  content: "ï";
+}
+
+.icon-adjust:before {
+  content: "ï‚";
+}
+
+.icon-tint:before {
+  content: "ïƒ";
+}
+
+.icon-edit:before,
+.icon-pencil-square-o:before,
+.icon-edit:before {
+  content: "ï„";
+}
+
+.icon-share-square-o:before, .icon-share:before, .icon-share-alt:before {
+  content: "ï…";
+}
+
+.icon-check-square-o:before {
+  content: "ï†";
+}
+
+.icon-arrows:before, .icon-move:before {
+  content: "ï‡";
+}
+
+.icon-step-backward:before {
+  content: "ïˆ";
+}
+
+.icon-fast-backward:before {
+  content: "ï‰";
+}
+
+.icon-backward:before {
+  content: "ïŠ";
+}
+
+.icon-play:before {
+  content: "ï‹";
+}
+
+.icon-pause:before {
+  content: "ïŒ";
+}
+
+.icon-stop:before {
+  content: "ï";
+}
+
+.icon-forward:before {
+  content: "ïŽ";
+}
+
+.icon-fast-forward:before {
+  content: "ï";
+}
+
+.icon-step-forward:before {
+  content: "ï‘";
+}
+
+.icon-eject:before {
+  content: "ï’";
+}
+
+.icon-chevron-left:before {
+  content: "ï“";
+}
+
+.icon-chevron-right:before {
+  content: "ï”";
+}
+
+.icon-plus-circle:before, .icon-plus-sign:before {
+  content: "ï•";
+}
+
+.icon-minus-circle:before, .icon-minus-sign:before {
+  content: "ï–";
+}
+
+.icon-times-circle:before, .icon-remove-sign:before {
+  content: "ï—";
+}
+
+.icon-check-circle:before, .icon-ok-sign:before {
+  content: "ï˜";
+}
+
+.icon-question-circle:before, .icon-question-sign:before {
+  content: "ï™";
+}
+
+.icon-info-circle:before, .icon-info-sign:before {
+  content: "ïš";
+}
+
+.icon-crosshairs:before, .icon-screenshot:before {
+  content: "ï›";
+}
+
+.icon-times-circle-o:before, .icon-remove-circle:before {
+  content: "ïœ";
+}
+
+.icon-check-circle-o:before, .icon-ok-circle:before {
+  content: "ï";
+}
+
+.icon-ban:before {
+  content: "ïž";
+}
+
+.icon-arrow-left:before {
+  content: "ï ";
+}
+
+.icon-arrow-right:before {
+  content: "ï¡";
+}
+
+.icon-arrow-up:before {
+  content: "ï¢";
+}
+
+.icon-arrow-down:before {
+  content: "ï£";
+}
+
+.icon-mail-forward:before,
+.icon-share:before,
+.icon-share-alt:before {
+  content: "ï¤";
+}
+
+.icon-expand:before, .icon-resize-full:before {
+  content: "ï¥";
+}
+
+.icon-compress:before, .icon-resize-small:before {
+  content: "ï¦";
+}
+
+.icon-plus:before {
+  content: "ï§";
+}
+
+.icon-minus:before {
+  content: "ï¨";
+}
+
+.icon-asterisk:before {
+  content: "ï©";
+}
+
+.icon-exclamation-circle:before, .icon-exclamation-sign:before {
+  content: "ïª";
+}
+
+.icon-gift:before {
+  content: "ï«";
+}
+
+.icon-leaf:before {
+  content: "ï¬";
+}
+
+.icon-fire:before {
+  content: "ï­";
+}
+
+.icon-eye:before, .icon-eye-open:before {
+  content: "ï®";
+}
+
+.icon-eye-slash:before, .icon-eye-close:before {
+  content: "ï°";
+}
+
+.icon-warning:before,
+.icon-exclamation-triangle:before,
+.icon-warning-sign:before {
+  content: "ï±";
+}
+
+.icon-plane:before {
+  content: "ï²";
+}
+
+.icon-calendar:before {
+  content: "ï³";
+}
+
+.icon-random:before {
+  content: "ï´";
+}
+
+.icon-comment:before {
+  content: "ïµ";
+}
+
+.icon-magnet:before {
+  content: "ï¶";
+}
+
+.icon-chevron-up:before {
+  content: "ï·";
+}
+
+.icon-chevron-down:before {
+  content: "ï¸";
+}
+
+.icon-retweet:before {
+  content: "ï¹";
+}
+
+.icon-shopping-cart:before {
+  content: "ïº";
+}
+
+.icon-folder:before, .icon-folder-close:before {
+  content: "ï»";
+}
+
+.icon-folder-open:before {
+  content: "ï¼";
+}
+
+.icon-arrows-v:before, .icon-resize-vertical:before {
+  content: "ï½";
+}
+
+.icon-arrows-h:before, .icon-resize-horizontal:before {
+  content: "ï¾";
+}
+
+.icon-bar-chart-o:before, .icon-bar-chart:before,
+.icon-bar-chart:before {
+  content: "ï‚€";
+}
+
+.icon-twitter-square:before, .icon-twitter-sign:before {
+  content: "ï‚";
+}
+
+.icon-facebook-square:before, .icon-facebook-sign:before {
+  content: "ï‚‚";
+}
+
+.icon-camera-retro:before {
+  content: "ï‚ƒ";
+}
+
+.icon-key:before {
+  content: "ï‚„";
+}
+
+.icon-gears:before,
+.icon-cogs:before {
+  content: "ï‚…";
+}
+
+.icon-comments:before {
+  content: "ï‚†";
+}
+
+.icon-thumbs-o-up:before, .icon-thumbs-up-alt:before {
+  content: "ï‚‡";
+}
+
+.icon-thumbs-o-down:before, .icon-thumbs-down-alt:before {
+  content: "ï‚ˆ";
+}
+
+.icon-star-half:before {
+  content: "ï‚‰";
+}
+
+.icon-heart-o:before, .icon-heart-empty:before {
+  content: "ï‚Š";
+}
+
+.icon-sign-out:before, .icon-signout:before {
+  content: "ï‚‹";
+}
+
+.icon-linkedin-square:before, .icon-linkedin-sign:before {
+  content: "ï‚Œ";
+}
+
+.icon-thumb-tack:before, .icon-pushpin:before {
+  content: "ï‚";
+}
+
+.icon-external-link:before {
+  content: "ï‚Ž";
+}
+
+.icon-sign-in:before, .icon-signin:before {
+  content: "ï‚";
+}
+
+.icon-trophy:before {
+  content: "ï‚‘";
+}
+
+.icon-github-square:before, .icon-github-sign:before {
+  content: "ï‚’";
+}
+
+.icon-upload:before, .icon-upload-alt:before {
+  content: "ï‚“";
+}
+
+.icon-lemon-o:before, .icon-lemon:before {
+  content: "ï‚”";
+}
+
+.icon-phone:before {
+  content: "ï‚•";
+}
+
+.icon-square-o:before, .icon-check-empty:before {
+  content: "ï‚–";
+}
+
+.icon-bookmark-o:before, .icon-bookmark-empty:before {
+  content: "ï‚—";
+}
+
+.icon-phone-square:before, .icon-phone-sign:before {
+  content: "ï‚˜";
+}
+
+.icon-twitter:before {
+  content: "ï‚™";
+}
+
+.icon-facebook-f:before,
+.icon-facebook:before {
+  content: "ï‚š";
+}
+
+.icon-github:before {
+  content: "ï‚›";
+}
+
+.icon-unlock:before {
+  content: "ï‚œ";
+}
+
+.icon-credit-card:before {
+  content: "ï‚";
+}
+
+.icon-feed:before,
+.icon-rss:before {
+  content: "ï‚ž";
+}
+
+.icon-hdd-o:before, .icon-hdd:before {
+  content: "ï‚ ";
+}
+
+.icon-bullhorn:before {
+  content: "ï‚¡";
+}
+
+.icon-bell:before, .icon-bell-alt:before {
+  content: "ïƒ³";
+}
+
+.icon-certificate:before {
+  content: "ï‚£";
+}
+
+.icon-hand-o-right:before, .icon-hand-right:before {
+  content: "ï‚¤";
+}
+
+.icon-hand-o-left:before, .icon-hand-left:before {
+  content: "ï‚¥";
+}
+
+.icon-hand-o-up:before, .icon-hand-up:before {
+  content: "ï‚¦";
+}
+
+.icon-hand-o-down:before, .icon-hand-down:before {
+  content: "ï‚§";
+}
+
+.icon-arrow-circle-left:before, .icon-circle-arrow-left:before {
+  content: "ï‚¨";
+}
+
+.icon-arrow-circle-right:before, .icon-circle-arrow-right:before {
+  content: "ï‚©";
+}
+
+.icon-arrow-circle-up:before, .icon-circle-arrow-up:before {
+  content: "ï‚ª";
+}
+
+.icon-arrow-circle-down:before, .icon-circle-arrow-down:before {
+  content: "ï‚«";
+}
+
+.icon-globe:before {
+  content: "ï‚¬";
+}
+
+.icon-wrench:before {
+  content: "ï‚­";
+}
+
+.icon-tasks:before {
+  content: "ï‚®";
+}
+
+.icon-filter:before {
+  content: "ï‚°";
+}
+
+.icon-briefcase:before {
+  content: "ï‚±";
+}
+
+.icon-arrows-alt:before, .icon-fullscreen:before {
+  content: "ï‚²";
+}
+
+.icon-group:before,
+.icon-users:before,
+.icon-group:before {
+  content: "ïƒ€";
+}
+
+.icon-chain:before,
+.icon-link:before {
+  content: "ïƒ";
+}
+
+.icon-cloud:before {
+  content: "ïƒ‚";
+}
+
+.icon-flask:before, .icon-beaker:before {
+  content: "ïƒƒ";
+}
+
+.icon-cut:before,
+.icon-scissors:before,
+.icon-cut:before {
+  content: "ïƒ„";
+}
+
+.icon-copy:before,
+.icon-files-o:before,
+.icon-copy:before {
+  content: "ïƒ…";
+}
+
+.icon-paperclip:before, .icon-paper-clip:before {
+  content: "ïƒ†";
+}
+
+.icon-save:before,
+.icon-floppy-o:before,
+.icon-save:before {
+  content: "ïƒ‡";
+}
+
+.icon-square:before, .icon-sign-blank:before {
+  content: "ïƒˆ";
+}
+
+.icon-navicon:before,
+.icon-reorder:before,
+.icon-bars:before,
+.icon-reorder:before {
+  content: "ïƒ‰";
+}
+
+.icon-list-ul:before {
+  content: "ïƒŠ";
+}
+
+.icon-list-ol:before {
+  content: "ïƒ‹";
+}
+
+.icon-strikethrough:before {
+  content: "ïƒŒ";
+}
+
+.icon-underline:before {
+  content: "ïƒ";
+}
+
+.icon-table:before {
+  content: "ïƒŽ";
+}
+
+.icon-magic:before {
+  content: "ïƒ";
+}
+
+.icon-truck:before {
+  content: "ïƒ‘";
+}
+
+.icon-pinterest:before {
+  content: "ïƒ’";
+}
+
+.icon-pinterest-square:before, .icon-pinterest-sign:before {
+  content: "ïƒ“";
+}
+
+.icon-google-plus-square:before, .icon-google-plus-sign:before {
+  content: "ïƒ”";
+}
+
+.icon-google-plus:before {
+  content: "ïƒ•";
+}
+
+.icon-money:before {
+  content: "ïƒ–";
+}
+
+.icon-caret-down:before {
+  content: "ïƒ—";
+}
+
+.icon-caret-up:before {
+  content: "ïƒ˜";
+}
+
+.icon-caret-left:before {
+  content: "ïƒ™";
+}
+
+.icon-caret-right:before {
+  content: "ïƒš";
+}
+
+.icon-columns:before {
+  content: "ïƒ›";
+}
+
+.icon-unsorted:before,
+.icon-sort:before {
+  content: "ïƒœ";
+}
+
+.icon-sort-down:before,
+.icon-sort-desc:before,
+.icon-sort-up:before {
+  content: "ïƒ";
+}
+
+.icon-sort-up:before,
+.icon-sort-asc:before,
+.icon-sort-down:before {
+  content: "ïƒž";
+}
+
+.icon-envelope:before {
+  content: "ïƒ ";
+}
+
+.icon-linkedin:before {
+  content: "ïƒ¡";
+}
+
+.icon-rotate-left:before,
+.icon-undo:before {
+  content: "ïƒ¢";
+}
+
+.icon-legal:before,
+.icon-gavel:before,
+.icon-legal:before {
+  content: "ïƒ£";
+}
+
+.icon-dashboard:before,
+.icon-tachometer:before,
+.icon-dashboard:before {
+  content: "ïƒ¤";
+}
+
+.icon-comment-o:before, .icon-comment-alt:before {
+  content: "ïƒ¥";
+}
+
+.icon-comments-o:before, .icon-comments-alt:before {
+  content: "ïƒ¦";
+}
+
+.icon-flash:before,
+.icon-bolt:before {
+  content: "ïƒ§";
+}
+
+.icon-sitemap:before {
+  content: "ïƒ¨";
+}
+
+.icon-umbrella:before {
+  content: "ïƒ©";
+}
+
+.icon-paste:before,
+.icon-clipboard:before,
+.icon-paste:before {
+  content: "ïƒª";
+}
+
+.icon-lightbulb-o:before, .icon-lightbulb:before {
+  content: "ïƒ«";
+}
+
+.icon-exchange:before {
+  content: "ïƒ¬";
+}
+
+.icon-cloud-download:before {
+  content: "ïƒ­";
+}
+
+.icon-cloud-upload:before {
+  content: "ïƒ®";
+}
+
+.icon-user-md:before {
+  content: "ïƒ°";
+}
+
+.icon-stethoscope:before {
+  content: "ïƒ±";
+}
+
+.icon-suitcase:before {
+  content: "ïƒ²";
+}
+
+.icon-bell-o:before, .icon-bell:before, .icon-bell-alt:before {
+  content: "ï‚¢";
+}
+
+.icon-coffee:before {
+  content: "ïƒ´";
+}
+
+.icon-cutlery:before, .icon-food:before {
+  content: "ïƒµ";
+}
+
+.icon-file-text-o:before, .icon-file-text-alt:before {
+  content: "ïƒ¶";
+}
+
+.icon-building-o:before, .icon-building:before {
+  content: "ïƒ·";
+}
+
+.icon-hospital-o:before, .icon-hospital:before {
+  content: "ïƒ¸";
+}
+
+.icon-ambulance:before {
+  content: "ïƒ¹";
+}
+
+.icon-medkit:before {
+  content: "ïƒº";
+}
+
+.icon-fighter-jet:before {
+  content: "ïƒ»";
+}
+
+.icon-beer:before {
+  content: "ïƒ¼";
+}
+
+.icon-h-square:before, .icon-h-sign:before {
+  content: "ïƒ½";
+}
+
+.icon-plus-square:before, .icon-plus-sign-alt:before {
+  content: "ïƒ¾";
+}
+
+.icon-angle-double-left:before, .icon-double-angle-left:before {
+  content: "ï„€";
+}
+
+.icon-angle-double-right:before, .icon-double-angle-right:before {
+  content: "ï„";
+}
+
+.icon-angle-double-up:before, .icon-double-angle-up:before {
+  content: "ï„‚";
+}
+
+.icon-angle-double-down:before, .icon-double-angle-down:before {
+  content: "ï„ƒ";
+}
+
+.icon-angle-left:before {
+  content: "ï„„";
+}
+
+.icon-angle-right:before {
+  content: "ï„…";
+}
+
+.icon-angle-up:before {
+  content: "ï„†";
+}
+
+.icon-angle-down:before {
+  content: "ï„‡";
+}
+
+.icon-desktop:before {
+  content: "ï„ˆ";
+}
+
+.icon-laptop:before {
+  content: "ï„‰";
+}
+
+.icon-tablet:before {
+  content: "ï„Š";
+}
+
+.icon-mobile-phone:before,
+.icon-mobile:before,
+.icon-mobile-phone:before {
+  content: "ï„‹";
+}
+
+.icon-circle-o:before, .icon-circle-blank:before {
+  content: "ï„Œ";
+}
+
+.icon-quote-left:before {
+  content: "ï„";
+}
+
+.icon-quote-right:before {
+  content: "ï„Ž";
+}
+
+.icon-spinner:before {
+  content: "ï„";
+}
+
+.icon-circle:before {
+  content: "ï„‘";
+}
+
+.icon-mail-reply:before,
+.icon-reply:before {
+  content: "ï„’";
+}
+
+.icon-github-alt:before {
+  content: "ï„“";
+}
+
+.icon-folder-o:before, .icon-folder-close-alt:before {
+  content: "ï„”";
+}
+
+.icon-folder-open-o:before, .icon-folder-open-alt:before {
+  content: "ï„•";
+}
+
+.icon-smile-o:before, .icon-smile:before {
+  content: "ï„˜";
+}
+
+.icon-frown-o:before, .icon-frown:before {
+  content: "ï„™";
+}
+
+.icon-meh-o:before, .icon-meh:before {
+  content: "ï„š";
+}
+
+.icon-gamepad:before {
+  content: "ï„›";
+}
+
+.icon-keyboard-o:before, .icon-keyboard:before {
+  content: "ï„œ";
+}
+
+.icon-flag-o:before, .icon-flag-alt:before {
+  content: "ï„";
+}
+
+.icon-flag-checkered:before {
+  content: "ï„ž";
+}
+
+.icon-terminal:before {
+  content: "ï„ ";
+}
+
+.icon-code:before {
+  content: "ï„¡";
+}
+
+.icon-mail-reply-all:before,
+.icon-reply-all:before {
+  content: "ï„¢";
+}
+
+.icon-star-half-empty:before,
+.icon-star-half-full:before,
+.icon-star-half-o:before,
+.icon-star-half-empty:before {
+  content: "ï„£";
+}
+
+.icon-location-arrow:before {
+  content: "ï„¤";
+}
+
+.icon-crop:before {
+  content: "ï„¥";
+}
+
+.icon-code-fork:before {
+  content: "ï„¦";
+}
+
+.icon-unlink:before,
+.icon-chain-broken:before,
+.icon-unlink:before {
+  content: "ï„§";
+}
+
+.icon-question:before {
+  content: "ï„¨";
+}
+
+.icon-info:before {
+  content: "ï„©";
+}
+
+.icon-exclamation:before {
+  content: "ï„ª";
+}
+
+.icon-superscript:before {
+  content: "ï„«";
+}
+
+.icon-subscript:before {
+  content: "ï„¬";
+}
+
+.icon-eraser:before {
+  content: "ï„­";
+}
+
+.icon-puzzle-piece:before {
+  content: "ï„®";
+}
+
+.icon-microphone:before {
+  content: "ï„°";
+}
+
+.icon-microphone-slash:before, .icon-microphone-off:before {
+  content: "ï„±";
+}
+
+.icon-shield:before {
+  content: "ï„²";
+}
+
+.icon-calendar-o:before, .icon-calendar-empty:before {
+  content: "ï„³";
+}
+
+.icon-fire-extinguisher:before {
+  content: "ï„´";
+}
+
+.icon-rocket:before {
+  content: "ï„µ";
+}
+
+.icon-maxcdn:before {
+  content: "ï„¶";
+}
+
+.icon-chevron-circle-left:before, .icon-chevron-sign-left:before {
+  content: "ï„·";
+}
+
+.icon-chevron-circle-right:before, .icon-chevron-sign-right:before {
+  content: "ï„¸";
+}
+
+.icon-chevron-circle-up:before, .icon-chevron-sign-up:before {
+  content: "ï„¹";
+}
+
+.icon-chevron-circle-down:before, .icon-chevron-sign-down:before {
+  content: "ï„º";
+}
+
+.icon-html5:before {
+  content: "ï„»";
+}
+
+.icon-css3:before {
+  content: "ï„¼";
+}
+
+.icon-anchor:before {
+  content: "ï„½";
+}
+
+.icon-unlock-alt:before {
+  content: "ï„¾";
+}
+
+.icon-bullseye:before {
+  content: "ï…€";
+}
+
+.icon-ellipsis-h:before, .icon-ellipsis-horizontal:before {
+  content: "ï…";
+}
+
+.icon-ellipsis-v:before, .icon-ellipsis-vertical:before {
+  content: "ï…‚";
+}
+
+.icon-rss-square:before, .icon-rss-sign:before {
+  content: "ï…ƒ";
+}
+
+.icon-play-circle:before, .icon-play-sign:before {
+  content: "ï…„";
+}
+
+.icon-ticket:before {
+  content: "ï……";
+}
+
+.icon-minus-square:before, .icon-minus-sign-alt:before {
+  content: "ï…†";
+}
+
+.icon-minus-square-o:before, .icon-check-minus:before, .icon-collapse-alt:before {
+  content: "ï…‡";
+}
+
+.icon-level-up:before {
+  content: "ï…ˆ";
+}
+
+.icon-level-down:before {
+  content: "ï…‰";
+}
+
+.icon-check-square:before, .icon-check-sign:before {
+  content: "ï…Š";
+}
+
+.icon-pencil-square:before, .icon-edit-sign:before {
+  content: "ï…‹";
+}
+
+.icon-external-link-square:before, .icon-external-link-sign:before {
+  content: "ï…Œ";
+}
+
+.icon-share-square:before, .icon-share-sign:before {
+  content: "ï…";
+}
+
+.icon-compass:before {
+  content: "ï…Ž";
+}
+
+.icon-toggle-down:before,
+.icon-caret-square-o-down:before,
+.icon-collapse:before {
+  content: "ï…";
+}
+
+.icon-toggle-up:before,
+.icon-caret-square-o-up:before,
+.icon-collapse-top:before {
+  content: "ï…‘";
+}
+
+.icon-toggle-right:before,
+.icon-caret-square-o-right:before {
+  content: "ï…’";
+}
+
+.icon-euro:before,
+.icon-eur:before {
+  content: "ï…“";
+}
+
+.icon-gbp:before {
+  content: "ï…”";
+}
+
+.icon-dollar:before,
+.icon-usd:before {
+  content: "ï…•";
+}
+
+.icon-rupee:before,
+.icon-inr:before {
+  content: "ï…–";
+}
+
+.icon-cny:before,
+.icon-rmb:before,
+.icon-yen:before,
+.icon-jpy:before {
+  content: "ï…—";
+}
+
+.icon-ruble:before,
+.icon-rouble:before,
+.icon-rub:before,
+.icon-cny:before {
+  content: "ï…˜";
+}
+
+.icon-won:before,
+.icon-krw:before {
+  content: "ï…™";
+}
+
+.icon-bitcoin:before,
+.icon-btc:before {
+  content: "ï…š";
+}
+
+.icon-file:before {
+  content: "ï…›";
+}
+
+.icon-file-text:before {
+  content: "ï…œ";
+}
+
+.icon-sort-alpha-asc:before, .icon-sort-by-alphabet:before {
+  content: "ï…";
+}
+
+.icon-sort-alpha-desc:before, .icon-sort-by-alphabet-alt:before {
+  content: "ï…ž";
+}
+
+.icon-sort-amount-asc:before, .icon-sort-by-attributes:before {
+  content: "ï… ";
+}
+
+.icon-sort-amount-desc:before, .icon-sort-by-attributes-alt:before {
+  content: "ï…¡";
+}
+
+.icon-sort-numeric-asc:before, .icon-sort-by-order:before {
+  content: "ï…¢";
+}
+
+.icon-sort-numeric-desc:before, .icon-sort-by-order-alt:before {
+  content: "ï…£";
+}
+
+.icon-thumbs-up:before {
+  content: "ï…¤";
+}
+
+.icon-thumbs-down:before {
+  content: "ï…¥";
+}
+
+.icon-youtube-square:before, .icon-youtube-sign:before {
+  content: "ï…¦";
+}
+
+.icon-youtube:before {
+  content: "ï…§";
+}
+
+.icon-xing:before {
+  content: "ï…¨";
+}
+
+.icon-xing-square:before, .icon-xing-sign:before {
+  content: "ï…©";
+}
+
+.icon-youtube-play:before {
+  content: "ï…ª";
+}
+
+.icon-dropbox:before {
+  content: "ï…«";
+}
+
+.icon-stack-overflow:before, .icon-stackexchange:before {
+  content: "ï…¬";
+}
+
+.icon-instagram:before {
+  content: "ï…­";
+}
+
+.icon-flickr:before {
+  content: "ï…®";
+}
+
+.icon-adn:before {
+  content: "ï…°";
+}
+
+.icon-bitbucket:before {
+  content: "ï…±";
+}
+
+.icon-bitbucket-square:before, .icon-bitbucket-sign:before {
+  content: "ï…²";
+}
+
+.icon-tumblr:before {
+  content: "ï…³";
+}
+
+.icon-tumblr-square:before, .icon-tumblr-sign:before {
+  content: "ï…´";
+}
+
+.icon-long-arrow-down:before {
+  content: "ï…µ";
+}
+
+.icon-long-arrow-up:before {
+  content: "ï…¶";
+}
+
+.icon-long-arrow-left:before {
+  content: "ï…·";
+}
+
+.icon-long-arrow-right:before {
+  content: "ï…¸";
+}
+
+.icon-apple:before {
+  content: "ï…¹";
+}
+
+.icon-windows:before {
+  content: "ï…º";
+}
+
+.icon-android:before {
+  content: "ï…»";
+}
+
+.icon-linux:before {
+  content: "ï…¼";
+}
+
+.icon-dribbble:before {
+  content: "ï…½";
+}
+
+.icon-skype:before {
+  content: "ï…¾";
+}
+
+.icon-foursquare:before {
+  content: "ï†€";
+}
+
+.icon-trello:before {
+  content: "ï†";
+}
+
+.icon-female:before {
+  content: "ï†‚";
+}
+
+.icon-male:before {
+  content: "ï†ƒ";
+}
+
+.icon-gittip:before,
+.icon-gratipay:before {
+  content: "ï†„";
+}
+
+.icon-sun-o:before, .icon-sun:before {
+  content: "ï†…";
+}
+
+.icon-moon-o:before, .icon-moon:before {
+  content: "ï††";
+}
+
+.icon-archive:before {
+  content: "ï†‡";
+}
+
+.icon-bug:before {
+  content: "ï†ˆ";
+}
+
+.icon-vk:before {
+  content: "ï†‰";
+}
+
+.icon-weibo:before {
+  content: "ï†Š";
+}
+
+.icon-renren:before {
+  content: "ï†‹";
+}
+
+.icon-pagelines:before {
+  content: "ï†Œ";
+}
+
+.icon-stack-exchange:before {
+  content: "ï†";
+}
+
+.icon-arrow-circle-o-right:before {
+  content: "ï†Ž";
+}
+
+.icon-arrow-circle-o-left:before {
+  content: "ï†";
+}
+
+.icon-toggle-left:before,
+.icon-caret-square-o-left:before {
+  content: "ï†‘";
+}
+
+.icon-dot-circle-o:before {
+  content: "ï†’";
+}
+
+.icon-wheelchair:before {
+  content: "ï†“";
+}
+
+.icon-vimeo-square:before {
+  content: "ï†”";
+}
+
+.icon-turkish-lira:before,
+.icon-try:before {
+  content: "ï†•";
+}
+
+.icon-plus-square-o:before, .icon-expand-alt:before {
+  content: "ï†–";
+}
+
+.icon-space-shuttle:before {
+  content: "ï†—";
+}
+
+.icon-slack:before {
+  content: "ï†˜";
+}
+
+.icon-envelope-square:before {
+  content: "ï†™";
+}
+
+.icon-wordpress:before {
+  content: "ï†š";
+}
+
+.icon-openid:before {
+  content: "ï†›";
+}
+
+.icon-institution:before,
+.icon-bank:before,
+.icon-university:before {
+  content: "ï†œ";
+}
+
+.icon-mortar-board:before,
+.icon-graduation-cap:before {
+  content: "ï†";
+}
+
+.icon-yahoo:before {
+  content: "ï†ž";
+}
+
+.icon-google:before {
+  content: "ï† ";
+}
+
+.icon-reddit:before {
+  content: "ï†¡";
+}
+
+.icon-reddit-square:before {
+  content: "ï†¢";
+}
+
+.icon-stumbleupon-circle:before {
+  content: "ï†£";
+}
+
+.icon-stumbleupon:before {
+  content: "ï†¤";
+}
+
+.icon-delicious:before {
+  content: "ï†¥";
+}
+
+.icon-digg:before {
+  content: "ï†¦";
+}
+
+.icon-pied-piper-pp:before {
+  content: "ï†§";
+}
+
+.icon-pied-piper-alt:before {
+  content: "ï†¨";
+}
+
+.icon-drupal:before {
+  content: "ï†©";
+}
+
+.icon-joomla:before {
+  content: "ï†ª";
+}
+
+.icon-language:before {
+  content: "ï†«";
+}
+
+.icon-fax:before {
+  content: "ï†¬";
+}
+
+.icon-building:before {
+  content: "ï†­";
+}
+
+.icon-child:before {
+  content: "ï†®";
+}
+
+.icon-paw:before {
+  content: "ï†°";
+}
+
+.icon-spoon:before {
+  content: "ï†±";
+}
+
+.icon-cube:before {
+  content: "ï†²";
+}
+
+.icon-cubes:before {
+  content: "ï†³";
+}
+
+.icon-behance:before {
+  content: "ï†´";
+}
+
+.icon-behance-square:before {
+  content: "ï†µ";
+}
+
+.icon-steam:before {
+  content: "ï†¶";
+}
+
+.icon-steam-square:before {
+  content: "ï†·";
+}
+
+.icon-recycle:before {
+  content: "ï†¸";
+}
+
+.icon-automobile:before,
+.icon-car:before {
+  content: "ï†¹";
+}
+
+.icon-cab:before,
+.icon-taxi:before {
+  content: "ï†º";
+}
+
+.icon-tree:before {
+  content: "ï†»";
+}
+
+.icon-spotify:before {
+  content: "ï†¼";
+}
+
+.icon-deviantart:before {
+  content: "ï†½";
+}
+
+.icon-soundcloud:before {
+  content: "ï†¾";
+}
+
+.icon-database:before {
+  content: "ï‡€";
+}
+
+.icon-file-pdf-o:before {
+  content: "ï‡";
+}
+
+.icon-file-word-o:before {
+  content: "ï‡‚";
+}
+
+.icon-file-excel-o:before {
+  content: "ï‡ƒ";
+}
+
+.icon-file-powerpoint-o:before {
+  content: "ï‡„";
+}
+
+.icon-file-photo-o:before,
+.icon-file-picture-o:before,
+.icon-file-image-o:before {
+  content: "ï‡…";
+}
+
+.icon-file-zip-o:before,
+.icon-file-archive-o:before {
+  content: "ï‡†";
+}
+
+.icon-file-sound-o:before,
+.icon-file-audio-o:before {
+  content: "ï‡‡";
+}
+
+.icon-file-movie-o:before,
+.icon-file-video-o:before {
+  content: "ï‡ˆ";
+}
+
+.icon-file-code-o:before {
+  content: "ï‡‰";
+}
+
+.icon-vine:before {
+  content: "ï‡Š";
+}
+
+.icon-codepen:before {
+  content: "ï‡‹";
+}
+
+.icon-jsfiddle:before {
+  content: "ï‡Œ";
+}
+
+.icon-life-bouy:before,
+.icon-life-buoy:before,
+.icon-life-saver:before,
+.icon-support:before,
+.icon-life-ring:before {
+  content: "ï‡";
+}
+
+.icon-circle-o-notch:before {
+  content: "ï‡Ž";
+}
+
+.icon-ra:before,
+.icon-resistance:before,
+.icon-rebel:before {
+  content: "ï‡";
+}
+
+.icon-ge:before,
+.icon-empire:before {
+  content: "ï‡‘";
+}
+
+.icon-git-square:before {
+  content: "ï‡’";
+}
+
+.icon-git:before {
+  content: "ï‡“";
+}
+
+.icon-y-combinator-square:before,
+.icon-yc-square:before,
+.icon-hacker-news:before {
+  content: "ï‡”";
+}
+
+.icon-tencent-weibo:before {
+  content: "ï‡•";
+}
+
+.icon-qq:before {
+  content: "ï‡–";
+}
+
+.icon-wechat:before,
+.icon-weixin:before {
+  content: "ï‡—";
+}
+
+.icon-send:before,
+.icon-paper-plane:before {
+  content: "ï‡˜";
+}
+
+.icon-send-o:before,
+.icon-paper-plane-o:before {
+  content: "ï‡™";
+}
+
+.icon-history:before {
+  content: "ï‡š";
+}
+
+.icon-circle-thin:before {
+  content: "ï‡›";
+}
+
+.icon-header:before {
+  content: "ï‡œ";
+}
+
+.icon-paragraph:before {
+  content: "ï‡";
+}
+
+.icon-sliders:before {
+  content: "ï‡ž";
+}
+
+.icon-share-alt:before {
+  content: "ï‡ ";
+}
+
+.icon-share-alt-square:before {
+  content: "ï‡¡";
+}
+
+.icon-bomb:before {
+  content: "ï‡¢";
+}
+
+.icon-soccer-ball-o:before,
+.icon-futbol-o:before {
+  content: "ï‡£";
+}
+
+.icon-tty:before {
+  content: "ï‡¤";
+}
+
+.icon-binoculars:before {
+  content: "ï‡¥";
+}
+
+.icon-plug:before {
+  content: "ï‡¦";
+}
+
+.icon-slideshare:before {
+  content: "ï‡§";
+}
+
+.icon-twitch:before {
+  content: "ï‡¨";
+}
+
+.icon-yelp:before {
+  content: "ï‡©";
+}
+
+.icon-newspaper-o:before {
+  content: "ï‡ª";
+}
+
+.icon-wifi:before {
+  content: "ï‡«";
+}
+
+.icon-calculator:before {
+  content: "ï‡¬";
+}
+
+.icon-paypal:before {
+  content: "ï‡­";
+}
+
+.icon-google-wallet:before {
+  content: "ï‡®";
+}
+
+.icon-cc-visa:before {
+  content: "ï‡°";
+}
+
+.icon-cc-mastercard:before {
+  content: "ï‡±";
+}
+
+.icon-cc-discover:before {
+  content: "ï‡²";
+}
+
+.icon-cc-amex:before {
+  content: "ï‡³";
+}
+
+.icon-cc-paypal:before {
+  content: "ï‡´";
+}
+
+.icon-cc-stripe:before {
+  content: "ï‡µ";
+}
+
+.icon-bell-slash:before {
+  content: "ï‡¶";
+}
+
+.icon-bell-slash-o:before {
+  content: "ï‡·";
+}
+
+.icon-trash:before {
+  content: "ï‡¸";
+}
+
+.icon-copyright:before {
+  content: "ï‡¹";
+}
+
+.icon-at:before {
+  content: "ï‡º";
+}
+
+.icon-eyedropper:before {
+  content: "ï‡»";
+}
+
+.icon-paint-brush:before {
+  content: "ï‡¼";
+}
+
+.icon-birthday-cake:before {
+  content: "ï‡½";
+}
+
+.icon-area-chart:before {
+  content: "ï‡¾";
+}
+
+.icon-pie-chart:before {
+  content: "ïˆ€";
+}
+
+.icon-line-chart:before {
+  content: "ïˆ";
+}
+
+.icon-lastfm:before {
+  content: "ïˆ‚";
+}
+
+.icon-lastfm-square:before {
+  content: "ïˆƒ";
+}
+
+.icon-toggle-off:before {
+  content: "ïˆ„";
+}
+
+.icon-toggle-on:before {
+  content: "ïˆ…";
+}
+
+.icon-bicycle:before {
+  content: "ïˆ†";
+}
+
+.icon-bus:before {
+  content: "ïˆ‡";
+}
+
+.icon-ioxhost:before {
+  content: "ïˆˆ";
+}
+
+.icon-angellist:before {
+  content: "ïˆ‰";
+}
+
+.icon-cc:before {
+  content: "ïˆŠ";
+}
+
+.icon-shekel:before,
+.icon-sheqel:before,
+.icon-ils:before {
+  content: "ïˆ‹";
+}
+
+.icon-meanpath:before {
+  content: "ïˆŒ";
+}
+
+.icon-buysellads:before {
+  content: "ïˆ";
+}
+
+.icon-connectdevelop:before {
+  content: "ïˆŽ";
+}
+
+.icon-dashcube:before {
+  content: "ïˆ";
+}
+
+.icon-forumbee:before {
+  content: "ïˆ‘";
+}
+
+.icon-leanpub:before {
+  content: "ïˆ’";
+}
+
+.icon-sellsy:before {
+  content: "ïˆ“";
+}
+
+.icon-shirtsinbulk:before {
+  content: "ïˆ”";
+}
+
+.icon-simplybuilt:before {
+  content: "ïˆ•";
+}
+
+.icon-skyatlas:before {
+  content: "ïˆ–";
+}
+
+.icon-cart-plus:before {
+  content: "ïˆ—";
+}
+
+.icon-cart-arrow-down:before {
+  content: "ïˆ˜";
+}
+
+.icon-diamond:before {
+  content: "ïˆ™";
+}
+
+.icon-ship:before {
+  content: "ïˆš";
+}
+
+.icon-user-secret:before {
+  content: "ïˆ›";
+}
+
+.icon-motorcycle:before {
+  content: "ïˆœ";
+}
+
+.icon-street-view:before {
+  content: "ïˆ";
+}
+
+.icon-heartbeat:before {
+  content: "ïˆž";
+}
+
+.icon-venus:before {
+  content: "ïˆ¡";
+}
+
+.icon-mars:before {
+  content: "ïˆ¢";
+}
+
+.icon-mercury:before {
+  content: "ïˆ£";
+}
+
+.icon-intersex:before,
+.icon-transgender:before {
+  content: "ïˆ¤";
+}
+
+.icon-transgender-alt:before {
+  content: "ïˆ¥";
+}
+
+.icon-venus-double:before {
+  content: "ïˆ¦";
+}
+
+.icon-mars-double:before {
+  content: "ïˆ§";
+}
+
+.icon-venus-mars:before {
+  content: "ïˆ¨";
+}
+
+.icon-mars-stroke:before {
+  content: "ïˆ©";
+}
+
+.icon-mars-stroke-v:before {
+  content: "ïˆª";
+}
+
+.icon-mars-stroke-h:before {
+  content: "ïˆ«";
+}
+
+.icon-neuter:before {
+  content: "ïˆ¬";
+}
+
+.icon-genderless:before {
+  content: "ïˆ­";
+}
+
+.icon-facebook-official:before {
+  content: "ïˆ°";
+}
+
+.icon-pinterest-p:before {
+  content: "ïˆ±";
+}
+
+.icon-whatsapp:before {
+  content: "ïˆ²";
+}
+
+.icon-server:before {
+  content: "ïˆ³";
+}
+
+.icon-user-plus:before {
+  content: "ïˆ´";
+}
+
+.icon-user-times:before {
+  content: "ïˆµ";
+}
+
+.icon-hotel:before,
+.icon-bed:before {
+  content: "ïˆ¶";
+}
+
+.icon-viacoin:before {
+  content: "ïˆ·";
+}
+
+.icon-train:before {
+  content: "ïˆ¸";
+}
+
+.icon-subway:before {
+  content: "ïˆ¹";
+}
+
+.icon-medium:before {
+  content: "ïˆº";
+}
+
+.icon-yc:before,
+.icon-y-combinator:before {
+  content: "ïˆ»";
+}
+
+.icon-optin-monster:before {
+  content: "ïˆ¼";
+}
+
+.icon-opencart:before {
+  content: "ïˆ½";
+}
+
+.icon-expeditedssl:before {
+  content: "ïˆ¾";
+}
+
+.icon-battery-4:before,
+.icon-battery-full:before {
+  content: "ï‰€";
+}
+
+.icon-battery-3:before,
+.icon-battery-three-quarters:before {
+  content: "ï‰";
+}
+
+.icon-battery-2:before,
+.icon-battery-half:before {
+  content: "ï‰‚";
+}
+
+.icon-battery-1:before,
+.icon-battery-quarter:before {
+  content: "ï‰ƒ";
+}
+
+.icon-battery-0:before,
+.icon-battery-empty:before {
+  content: "ï‰„";
+}
+
+.icon-mouse-pointer:before {
+  content: "ï‰…";
+}
+
+.icon-i-cursor:before {
+  content: "ï‰†";
+}
+
+.icon-object-group:before {
+  content: "ï‰‡";
+}
+
+.icon-object-ungroup:before {
+  content: "ï‰ˆ";
+}
+
+.icon-sticky-note:before {
+  content: "ï‰‰";
+}
+
+.icon-sticky-note-o:before {
+  content: "ï‰Š";
+}
+
+.icon-cc-jcb:before {
+  content: "ï‰‹";
+}
+
+.icon-cc-diners-club:before {
+  content: "ï‰Œ";
+}
+
+.icon-clone:before {
+  content: "ï‰";
+}
+
+.icon-balance-scale:before {
+  content: "ï‰Ž";
+}
+
+.icon-hourglass-o:before {
+  content: "ï‰";
+}
+
+.icon-hourglass-1:before,
+.icon-hourglass-start:before {
+  content: "ï‰‘";
+}
+
+.icon-hourglass-2:before,
+.icon-hourglass-half:before {
+  content: "ï‰’";
+}
+
+.icon-hourglass-3:before,
+.icon-hourglass-end:before {
+  content: "ï‰“";
+}
+
+.icon-hourglass:before {
+  content: "ï‰”";
+}
+
+.icon-hand-grab-o:before,
+.icon-hand-rock-o:before {
+  content: "ï‰•";
+}
+
+.icon-hand-stop-o:before,
+.icon-hand-paper-o:before {
+  content: "ï‰–";
+}
+
+.icon-hand-scissors-o:before {
+  content: "ï‰—";
+}
+
+.icon-hand-lizard-o:before {
+  content: "ï‰˜";
+}
+
+.icon-hand-spock-o:before {
+  content: "ï‰™";
+}
+
+.icon-hand-pointer-o:before {
+  content: "ï‰š";
+}
+
+.icon-hand-peace-o:before {
+  content: "ï‰›";
+}
+
+.icon-trademark:before {
+  content: "ï‰œ";
+}
+
+.icon-registered:before {
+  content: "ï‰";
+}
+
+.icon-creative-commons:before {
+  content: "ï‰ž";
+}
+
+.icon-gg:before {
+  content: "ï‰ ";
+}
+
+.icon-gg-circle:before {
+  content: "ï‰¡";
+}
+
+.icon-tripadvisor:before {
+  content: "ï‰¢";
+}
+
+.icon-odnoklassniki:before {
+  content: "ï‰£";
+}
+
+.icon-odnoklassniki-square:before {
+  content: "ï‰¤";
+}
+
+.icon-get-pocket:before {
+  content: "ï‰¥";
+}
+
+.icon-wikipedia-w:before {
+  content: "ï‰¦";
+}
+
+.icon-safari:before {
+  content: "ï‰§";
+}
+
+.icon-chrome:before {
+  content: "ï‰¨";
+}
+
+.icon-firefox:before {
+  content: "ï‰©";
+}
+
+.icon-opera:before {
+  content: "ï‰ª";
+}
+
+.icon-internet-explorer:before {
+  content: "ï‰«";
+}
+
+.icon-tv:before,
+.icon-television:before {
+  content: "ï‰¬";
+}
+
+.icon-contao:before {
+  content: "ï‰­";
+}
+
+.icon-500px:before {
+  content: "ï‰®";
+}
+
+.icon-amazon:before {
+  content: "ï‰°";
+}
+
+.icon-calendar-plus-o:before {
+  content: "ï‰±";
+}
+
+.icon-calendar-minus-o:before {
+  content: "ï‰²";
+}
+
+.icon-calendar-times-o:before {
+  content: "ï‰³";
+}
+
+.icon-calendar-check-o:before {
+  content: "ï‰´";
+}
+
+.icon-industry:before {
+  content: "ï‰µ";
+}
+
+.icon-map-pin:before {
+  content: "ï‰¶";
+}
+
+.icon-map-signs:before {
+  content: "ï‰·";
+}
+
+.icon-map-o:before {
+  content: "ï‰¸";
+}
+
+.icon-map:before {
+  content: "ï‰¹";
+}
+
+.icon-commenting:before {
+  content: "ï‰º";
+}
+
+.icon-commenting-o:before {
+  content: "ï‰»";
+}
+
+.icon-houzz:before {
+  content: "ï‰¼";
+}
+
+.icon-vimeo:before {
+  content: "ï‰½";
+}
+
+.icon-black-tie:before {
+  content: "ï‰¾";
+}
+
+.icon-fonticons:before {
+  content: "ïŠ€";
+}
+
+.icon-reddit-alien:before {
+  content: "ïŠ";
+}
+
+.icon-edge:before {
+  content: "ïŠ‚";
+}
+
+.icon-credit-card-alt:before {
+  content: "ïŠƒ";
+}
+
+.icon-codiepie:before {
+  content: "ïŠ„";
+}
+
+.icon-modx:before {
+  content: "ïŠ…";
+}
+
+.icon-fort-awesome:before {
+  content: "ïŠ†";
+}
+
+.icon-usb:before {
+  content: "ïŠ‡";
+}
+
+.icon-product-hunt:before {
+  content: "ïŠˆ";
+}
+
+.icon-mixcloud:before {
+  content: "ïŠ‰";
+}
+
+.icon-scribd:before {
+  content: "ïŠŠ";
+}
+
+.icon-pause-circle:before {
+  content: "ïŠ‹";
+}
+
+.icon-pause-circle-o:before {
+  content: "ïŠŒ";
+}
+
+.icon-stop-circle:before {
+  content: "ïŠ";
+}
+
+.icon-stop-circle-o:before {
+  content: "ïŠŽ";
+}
+
+.icon-shopping-bag:before {
+  content: "ïŠ";
+}
+
+.icon-shopping-basket:before {
+  content: "ïŠ‘";
+}
+
+.icon-hashtag:before {
+  content: "ïŠ’";
+}
+
+.icon-bluetooth:before {
+  content: "ïŠ“";
+}
+
+.icon-bluetooth-b:before {
+  content: "ïŠ”";
+}
+
+.icon-percent:before {
+  content: "ïŠ•";
+}
+
+.icon-gitlab:before {
+  content: "ïŠ–";
+}
+
+.icon-wpbeginner:before {
+  content: "ïŠ—";
+}
+
+.icon-wpforms:before {
+  content: "ïŠ˜";
+}
+
+.icon-envira:before {
+  content: "ïŠ™";
+}
+
+.icon-universal-access:before {
+  content: "ïŠš";
+}
+
+.icon-wheelchair-alt:before {
+  content: "ïŠ›";
+}
+
+.icon-question-circle-o:before {
+  content: "ïŠœ";
+}
+
+.icon-blind:before {
+  content: "ïŠ";
+}
+
+.icon-audio-description:before {
+  content: "ïŠž";
+}
+
+.icon-volume-control-phone:before {
+  content: "ïŠ ";
+}
+
+.icon-braille:before {
+  content: "ïŠ¡";
+}
+
+.icon-assistive-listening-systems:before {
+  content: "ïŠ¢";
+}
+
+.icon-asl-interpreting:before,
+.icon-american-sign-language-interpreting:before {
+  content: "ïŠ£";
+}
+
+.icon-deafness:before,
+.icon-hard-of-hearing:before,
+.icon-deaf:before {
+  content: "ïŠ¤";
+}
+
+.icon-glide:before {
+  content: "ïŠ¥";
+}
+
+.icon-glide-g:before {
+  content: "ïŠ¦";
+}
+
+.icon-signing:before,
+.icon-sign-language:before {
+  content: "ïŠ§";
+}
+
+.icon-low-vision:before {
+  content: "ïŠ¨";
+}
+
+.icon-viadeo:before {
+  content: "ïŠ©";
+}
+
+.icon-viadeo-square:before {
+  content: "ïŠª";
+}
+
+.icon-snapchat:before {
+  content: "ïŠ«";
+}
+
+.icon-snapchat-ghost:before {
+  content: "ïŠ¬";
+}
+
+.icon-snapchat-square:before {
+  content: "ïŠ­";
+}
+
+.icon-pied-piper:before {
+  content: "ïŠ®";
+}
+
+.icon-first-order:before {
+  content: "ïŠ°";
+}
+
+.icon-yoast:before {
+  content: "ïŠ±";
+}
+
+.icon-themeisle:before {
+  content: "ïŠ²";
+}
+
+.icon-google-plus-circle:before,
+.icon-google-plus-official:before {
+  content: "ïŠ³";
+}
+
+.icon-fa:before,
+.icon-font-awesome:before {
+  content: "ïŠ´";
+}

@@ -1,0 +1,59 @@
+{% include "head.html" %}
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+				<div class="row mt">
+						<div class="col-lg-12">
+						  <h4><i class="fa fa-angle-right"></i> Masukkan Data Barang</h4>
+						  <div class="form-panel">
+							<div class=" form">
+							  <form class="cmxform form-horizontal style-form" id="commentForm" method="post" action="{{ url_for('insertBarang') }}">
+								<div class="form-group ">
+								  <label for="cname" class="control-label col-lg-2">ID Barang</label>
+								  <div class="col-lg-10">
+									<input class=" form-control" id="cname" name="id_barang" minlength="2" type="text" required />
+								  </div>
+								</div>
+								<div class="form-group ">
+								  <label for="cemail" class="control-label col-lg-2">Nama Barang</label>
+								  <div class="col-lg-10">
+									<input class="form-control " id="cemail" type="text" name="nama_barang" required />
+								  </div>
+								</div>
+								<div class="form-group ">
+								  <label for="curl" class="control-label col-lg-2">Stock Barang (optional)</label>
+								  <div class="col-lg-10">
+									<input class="form-control " id="curl" type="text" name="stock_barang" />
+								  </div>
+								</div>
+								<div class="form-group ">
+									<label for="curl" class="control-label col-lg-2">Harga Beli (optional)</label>
+									<div class="col-lg-10">
+									  <input class="form-control " id="curl" type="text" name="harga_beli" />
+									</div>
+								</div>
+								<div class="form-group ">
+									<label for="curl" class="control-label col-lg-2">Harga Jual (optional)</label>
+									<div class="col-lg-10">
+									  <input class="form-control " id="curl" type="text" name="harga_jual" />
+									</div>
+								</div>
+								<div class="form-group">
+								  <div class="col-lg-offset-2 col-lg-10">
+									<input class="btn btn-theme" type="submit" value="Simpan">
+								  </div>
+								</div>
+							  </form>
+							</div>
+						  </div>
+						  <!-- /form-panel -->
+						</div>
+						<!-- /col-lg-12 -->
+					  </div>			  
+        </section>
+    </section>
+    <!--main content end-->
+  </section>
+  {% include "footer_script.html" %}
+</body>
+</html>

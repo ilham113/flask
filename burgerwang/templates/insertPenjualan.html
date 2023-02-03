@@ -1,0 +1,65 @@
+{% include "head.html" %}
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+				<div class="row mt">
+						<div class="col-lg-12">
+						  <h4><i class="fa fa-angle-right"></i> Masukkan Data Penjualan</h4>
+						  <div class="form-panel">
+							<div class=" form">
+							  <form class="cmxform form-horizontal style-form" id="commentForm" method="post" action="{{ url_for('insertPenjualan') }}">
+								<div class="form-group ">
+									<label for="cname" class="control-label col-lg-2">ID Penjualan</label>
+									<div class="col-lg-10">
+									  <input class=" form-control" id="cname" type="text" name="id_penjualan" minlength="2" type="text" required />
+									</div>
+								</div>
+								<div class="form-group ">
+								  <label for="cname" class="control-label col-lg-2">ID Barang</label>
+								  <div class="col-lg-10">
+									<input class=" form-control" id="cname" type="text" name="id_barang" minlength="2" type="text" required />
+								  </div>
+								</div>
+								<div class="form-group ">
+								  <label for="cemail" class="control-label col-lg-2">ID Member</label>
+								  <div class="col-lg-10">
+									<input class="form-control " id="cemail" type="text" name="id_member" required />
+								  </div>
+								</div>
+								<div class="form-group ">
+								  <label for="curl" class="control-label col-lg-2">Jumlah Penjualan</label>
+								  <div class="col-lg-10">
+									<input class="form-control " id="curl" type="text" name="jumlah_penjualan" />
+								  </div>
+								</div>
+								<div class="form-group ">
+									<label for="curl" class="control-label col-lg-2">Tanggal Penjualan</label>
+									<div class="col-lg-10">
+									  <input class="form-control " id="curl" type="date" name="tgl_penjualan" />
+									</div>
+								</div>
+								<div class="form-group ">
+								  <label for="ccomment" class="control-label col-lg-2">Keterangan</label>
+								  <div class="col-lg-10">
+									<textarea class="form-control " id="ccomment" name="keterangan" required></textarea>
+								  </div>
+								</div>
+								<div class="form-group">
+								  <div class="col-lg-offset-2 col-lg-10">
+									<input class="btn btn-theme" type="submit" value="Simpan">
+								  </div>
+								</div>
+							  </form>
+							</div>
+						  </div>
+						  <!-- /form-panel -->
+						</div>
+						<!-- /col-lg-12 -->
+					  </div>			  
+        </section>
+    </section>
+    <!--main content end-->
+  </section>
+  {% include "footer_script.html" %}
+</body>
+</html>

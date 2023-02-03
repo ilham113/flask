@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Burger Wang</title>
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='BurgerWang/img/store.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='BurgerWang/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='BurgerWang/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <!--external css-->
+  <link href="{{ url_for('static', filename='BurgerWang/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='BurgerWang/css/zabuto_calendar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='BurgerWang/lib/gritter/css/jquery.gritter.css') }}" />
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='BurgerWang/css/style.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='BurgerWang/css/style-responsive.css') }}" rel="stylesheet">
+  <script src="{{ url_for('static', filename='BurgerWang/lib/chart-master/Chart.js') }}"></script>
+
+  <!-- =======================================================
+    Template Name: BurgerWang
+    Template URL: https://templatemag.com/BurgerWang-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="{{ url_for('index') }}" class="logo"><b>BURGER WANG</b></a>
+      <!--logo end-->
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='BurgerWang/img/store1.jpg') }}" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Burger Wang</h5>
+          <li class="mt">
+            <a class="active" href="{{ url_for('index') }}">
+              <!-- <i class="fa fa-dashboard"></i> -->
+              <span>HOME</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+              <a href="{{ url_for('MENU') }}">
+                <!-- <i class="fa fa-desktop"></i> -->
+                <span>MENU</span>
+                </a>
+            </li>
+          <li class="sub-menu">
+            <a href="{{ url_for('pembelian') }}">
+              <!-- <i class="fa fa-cogs"></i> -->
+              <span>PEMBELIAN</span>
+              </a>
+          </li>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <h1>Selamat Datang di Burger Wang, {{ username }}</h1>
+            <h3>Great food comes first</h3>
+            <p>Every day, more than 11 million guests visit BURGER WANG® restaurants around the world. And they do so because our restaurants are known for serving high-quality, great-tasting, and affordable food. Founded in 1954, BURGER WANG® is the second largest fast food hamburger chain in the world. The original HOME OF THE WHOPPER®, our commitment to premium ingredients, signature recipes, and family-friendly dining experiences is what has defined our brand for more than 50 successful years.</p>
+            <h3>3G Capital</h3>
+            <p>In 2010, 3G Capital, a global multi-million dollar investment firm focused on long term value creation, purchased Burger WANG Corporation, maWANG it a privately-held company. To learn more about 3G Capital</p>
+            <div class="content">
+              <img src="{{ url_for('static', filename='aboutBK-bg.jpg') }}">
+            </div>
+        </section>
+    </section>
+    <!--main content end-->
+  </section>
+  {% include "footer_script.html" %}
+</body>
+</html>
