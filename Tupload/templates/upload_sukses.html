@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contoh upload file</title>
+</head>
+<body>
+	<h2>contoh upload file</h2>
+	<h5>Muhammad Ilham Z</h5>
+	<p>File {{ filename }} telah berhasil di unggah.</p>
+	<p>tabel file sukses</p>
+	<table border="1">
+		<tr>
+			<td>id_file</td>
+			<td>nama_file</td>
+			<td>tanggal_upload</td>
+		</tr>
+		{%for baris in container%}
+		<tr>
+			<td>{{baris[0]}}</td>
+			<td>{{baris[1]}}</td>
+			<td>{{baris[2]}}</td>
+		</tr>
+		{%endfor%}
+	</table>
+</body>
+</html>

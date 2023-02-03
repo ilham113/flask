@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>insert</title>
+</head>
+<body>
+	<h1>tambah data</h1>
+	<h5>Muhammad llham</h5>
+	<form action="{{ url_for('insertcartuser') }} " method="post" >
+		Email :
+		<select name="email" size="1">
+			{% for barisa in containerE %}
+			<option value=" {{barisa[1]}} "> {{ barisa[1]}} </option>
+			{% endfor %}
+		</select>
+		<br>
+		Produk :
+		<select name="nama_produk" size="1">
+			{% for baris in container %}
+			<option value=" {{baris[1]}} "> {{ baris[1]}} </option>
+			{% endfor %}
+			<br>
+		</select><br>
+		harga : <br>
+		<input type="text" name="harga" size="20" maxlength="20"><br>
+		Banyak barang :  <br>
+		<input type="text" name="jumlah" size="20" maxlength="20"><br>
+
+		<p><input type="submit" value="simpan"></p><br>
+		
+	</form>
+</body>
+</html>

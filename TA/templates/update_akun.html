@@ -1,0 +1,141 @@
+{% include "head.html" %}
+    <title>Identitas</title>
+</head>
+<body id="identity" class="lang-en country-id currency-idr layout-full-width page-identity tax-display-disabled page-customer-account">
+    <main>
+        <section id="wrapper">
+            <div class="container">
+                <nav data-depth="2" class="breadcrumb hidden-sm-down">
+                    <ol>
+                        <li itemprop="itemListElement">
+                            <a itemprop="item" href="">
+                                <span itemprop="name">Home</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                        </li>
+                        <li itemprop="itemListElement">
+                            <a itemprop="item" href="{{ url_for('akun_saya') }}">
+                                <span itemprop="name">Selamat Datang {{ email }}</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                        </li>
+                        <li itemprop="itemListElement">
+                            <a itemprop="item" href="{{ url_for('identitas') }}">
+                                <span itemprop="name">Identitas</span>
+                            </a>
+                            <meta itemprop="position" content="3">
+                        </li>
+                    </ol>
+                </nav>
+              
+                <div id="content-wrapper">
+                    <section id="main">
+                        <header class="page-header">
+                            <h1>Data Pribadi Anda</h1>
+                        </header>
+                        <section id="content" class="page-content">
+                            <aside id="notifications">
+                                <div class="container"></div>
+                            </aside>
+            
+                            <form id="customer-form" class="js-customer-form" action="{{ url_for('update_user_process') }}" method="post">
+                                <section>
+                                    <div class="form-group row ">
+                                        <label class="col-md-3 form-control-label">Jenis Kelamin</label>
+                                        <div class="col-md-6 form-control-valign">
+                                            <label class="radio-inline">
+                                                <span class="custom-radio">
+                                                    <input name="jenis_kelamin" type="radio" value="Laki-laki">
+                                                    <span></span>
+                                                </span>Laki-laki
+                                            </label>
+                                            <label class="radio-inline">
+                                                <span class="custom-radio">
+                                                    <input name="jenis_kelamin" type="radio" value="Perempuan">
+                                                    <span></span>
+                                                </span>Perempuan
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 form-control-comment"></div>
+                                    </div>
+
+                                    <div class="form-group row ">
+                                        <label class="col-md-3 form-control-label required">Nama</label>
+                                        <div class="col-md-6">
+                                            <input class="form-control" name="nama" type="text" value="{{data[3]}}" required="">
+                                        </div>
+                
+                                        <div class="col-md-3 form-control-comment"></div>
+                                    </div>
+                                    
+                                    <div class="form-group row ">
+                                        <label class="col-md-3 form-control-label required">Nomor Telepon</label>
+                                        <div class="col-md-6">
+                                            <input class="form-control" name="no_telp" type="text" value="{{data[6]}}" required="">
+                                        </div>
+                                        <div class="col-md-3 form-control-comment"></div>
+                                    </div>
+              
+                                    <div class="form-group row ">
+                                        <label class="col-md-3 form-control-label required">Email</label>
+                                        <div class="col-md-6">
+                                            <input class="form-control" name="email" type="email" value="{{data[1]}}" required="">
+                                        </div>
+                                        <div class="col-md-3 form-control-comment"></div>
+                                    </div>
+              
+                                    <div class="form-group row ">
+                                        <label class="col-md-3 form-control-label required">Password</label>
+                                        <div class="col-md-6">
+                                            <div class="input-group js-parent-focus">
+                                                <input class="form-control js-child-focus js-visible-password" name="password" type="password" value="{{data[2]}}" pattern=".{5,}" required="">
+                                                <span class="input-group-btn">
+                                                    <button class="btn" type="button" data-action="show-password" data-text-show="Show" data-text-hide="Hide">Show</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 form-control-comment"></div>
+                                    </div>
+              
+                                    <div class="form-group row ">
+                                        <label class="col-md-3 form-control-label">Tanggal Lahir</label>
+                                        <div class="col-md-6">
+                                            <input class="form-control" name="tanggal_lahir" type="date" placeholder="DD/MM/YYYY" value="{{data[4]}}">
+                                        </div>
+                                        <div class="col-md-3 form-control-comment">Boleh dikosongkan</div>
+                                    </div>
+
+                                    <div class="form-group row ">
+                                        <label class="col-md-3 form-control-label required">Alamat</label>
+                                        <div class="col-md-6">
+                                            <input class="form-control" name="alamat" type="text" value="{{data[7]}}" required="">
+                                        </div>
+                                        <div class="col-md-3 form-control-comment"></div>
+                                    </div>
+                                </section>
+
+                                <footer class="form-footer clearfix">
+                                    <input type="hidden" name="submitCreate" value="1">
+                                    <input type="hidden" name="no" value=" {{ data[0]}} ">
+                                    <button class="btn btn-primary form-control-submit pull-xs-right" data-link-action="save-customer" type="submit">Simpan</button>
+                                </footer>
+                            </form>
+                        </section>
+                        <footer class="page-footer">
+                            <a href="my-account.html" class="account-link">
+                                <i class="material-icons"></i>
+                                <span>Kembali ke halaman Akun Anda</span>
+                            </a>
+                            <a href="home.html" class="account-link">
+                                <i class="material-icons"></i>
+                                <span>Home</span>
+                            </a>
+                        </footer>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>

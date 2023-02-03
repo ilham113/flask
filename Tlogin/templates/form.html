@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tugas session</title>
+</head>
+<body>
+	<h2>tugas Session</h2>
+	<h5>Muhammad Ilham Z</h5>
+	{% if msg %}
+		<p style="color: red"> {{msg}} </p>
+	{% endif %}
+	<form action=" {{url_for('login')}} " method="post">
+		username :<br>
+		<input type="text" name="username"><br>
+		Password :<br>
+		<input type="password" name="password"><br>
+		<p><input type="submit" value="login"></p>
+	</form>
+</body>
+</html>

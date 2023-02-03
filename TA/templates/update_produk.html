@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>insert</title>
+</head>
+<body>
+	<h1>tambah data</h1>
+	<h5>Muhammad llham</h5>
+	<form action="{{ url_for('update_produk_process') }} " method="post" enctype="multipart/form-data">
+		nama: <br>
+		<input type="text" name="nama_produk" size="20" maxlength="20" value="{{datap[1]}}"><br>
+		gambar <br>
+		<input type="file" name="gambar" value="{{datap[2]}}"><br>
+		diskripsi <br>
+		<input type="textarea" name="diskripsi" size="20" maxlength="10000" value="{{datap[3]}}"><br>
+		harga : <br>
+		<input type="text" name="harga" size="20" maxlength="20" value="{{datap[4]}}  "><br>
+		<input type="hidden" name="no" value=" {{ datap[0]}} ">
+		<p><input type="submit" value="simpan"></p><br>
+		
+	</form>
+</body>
+</html>

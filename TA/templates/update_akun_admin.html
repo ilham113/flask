@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>update akun </title>
+</head>
+<body>
+    <h1>update akun</h1>
+    <form action="{{ url_for('update_user_process_admin') }} " method="post" >
+        email: <br>
+        <input type="text" name="email" size="20" maxlength="20" value="{{dataa[1]}}"><br>
+        password: <br>
+        <input type="password" name="password" value="{{dataa[2]}}"><br>
+        nama: <br>
+        <input type="text" name="nama" size="20" maxlength="10000" value="{{dataa[3]}}"><br>
+        tanggal Lahir : <br>
+        <input type="date" name="tanggal_lahir" size="20" maxlength="20" value="{{dataa[4]}}  "><br>
+        jenis kelamin:
+        <input type="radio" name="jenis_kelamin" value="laki-laki">laki
+        <input type="radio" name="jenis_kelamin" value="perempuan">perepuan<br>
+        No HP:
+        <input type="text" name="no_telp" value="{{dataa[6]}} "><br>
+        alamat :
+        <input type="textarea" name="alamat" value="{{dataa[7]}} ">
+
+        <input type="hidden" name="no" value="{{dataa[0]}} ">
+        <p><input type="submit" value="simpan"></p><br>
+        
+    </form>
+</body>
+</html>

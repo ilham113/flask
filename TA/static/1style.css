@@ -1,0 +1,24 @@
+#products.thumbnail-container,.featured-products .thumbnail-container, .product-accessories .thumbnail-container, .product-miniature .thumbnail-container {
+	max-width: 200px;
+	height: 270px;}
+
+#products .thumbnail-container, .featured-products .thumbnail-container, .product-accessories .thumbnail-container, .product-miniature .thumbnail-container {
+	border: 2px solid #503795;
+	margin-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	box-shadow: none;}
+
+
+
+thumbnail-container{
+	border: 2px solid #503795;
+	margin-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	box-shadow: none;
+}

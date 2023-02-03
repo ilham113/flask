@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DAFTAR PEMBELI</title>
+</head>
+<body>
+	<h2>DAFTAR PEMBELI</h2>
+	<table border="1">
+		<tr>
+			<td>Email</td>
+			<td>Nama Produk</td>
+			<td>Harga</td>
+			<td>Jumlah</td>
+			<td>Total</td>
+			<td>Ubah</td>
+			<td>Hapus</td>
+		</tr>
+		{% for baris in container %}
+		<tr>
+			<td>{{ baris[1] }} </td>
+			<td>{{ baris[2] }} </td>
+			<td>{{ baris[3] }} </td>
+			<td>{{ baris[4] }} </td>
+			<td>{{ baris[5] }} </td>
+			<td><a href=" {{ url_for('updatecart',no=baris[0])}} ">ubah</a></td>
+			<td><a href="{{ url_for('deletecart', no=baris[0])}} ">hapus</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+	<p><a href="{{ url_for('insertcartadmin') }} ">Tambah Data</a></p>
+	<p><a href="{{ url_for('admin')}} ">kembali</a></p>
+</body>
+</html>

@@ -1,0 +1,134 @@
+{% include "head.html" %}
+    <title>Buat Akun</title>
+</head>
+
+<body id="contact" class="lang-en country-id currency-idr layout-left-column page-contact tax-display-disabled">
+    <main>
+        <aside id="notifications">
+            <div class="container"></div>
+        </aside>
+        
+        <section id="wrapper">
+            <div class="container">
+                <nav data-depth="1" class="breadcrumb hidden-sm-down">
+                    <ol itemscope="">
+                        <li itemprop="itemListElement" itemscope="" itemtype="">
+                            <a itemprop="item" href="">
+                                <span itemprop="name">Home</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                        </li>
+                    </ol>
+                </nav>
+                
+                <div id="content-wrapper">
+                    <section id="main">
+                        <header class="page-header">
+                            <h1>Create an account</h1>
+                        </header>
+                        <section id="content" class="page-content card card-block">
+                            
+                            <section class="register-form">
+                                <p>Sudah mempunyai akun? <a href="{{ url_for('login')}}">Login disini!</a></p>
+                  
+                                <form action="{{url_for('buat_akun')}}" method="post">
+                                    <input type="hidden" name="id_user">
+                                    <section>
+                                        <!--Jenis Kelamin-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label">Jenis Kelamin</label>
+                                            <div class="col-md-6 form-control-valign">
+                                                <label class="radio-inline">
+                                                    <span class="custom-radio">
+                                                        <input name="jenis_kelamin" type="radio" value="Laki-laki">
+                                                        <span></span>
+                                                    </span>
+                                                    Laki-laki
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <span class="custom-radio">
+                                                        <input name="jenis_kelamin" type="radio" value="Perempuan">
+                                                        <span></span>
+                                                    </span>
+                                                    Perempuan
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Nama-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Nama</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="nama" type="text" required="">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Nomor Telepon-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Nomor Telepon</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="no_telp" type="text" required="">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Email-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Email</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="email" type="email" required="" placeholder="contohemail@email.com">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Password-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Password</label>
+                                            <div class="col-md-6">
+                                                <div class="input-group js-parent-focus">
+                                                    <input class="form-control js-child-focus js-visible-password" name="password" type="password" value="" pattern=".{5,}" required="" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+
+                                        <!--Alamat-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Alamat</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="alamat" type="text" required="">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Tanggal Lahir-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label">Birthdate</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="tanggal_lahir" type="date" placeholder="">
+                                                <span class="form-control-comment"></span>
+                                            </div>
+                                            <div class="col-md-3 form-control-comment">Optional</div>
+                                        </div>
+                                    </section>
+                      
+                                    <footer class="form-footer clearfix">
+                                        <input type="hidden" name="submitCreate" value="1">
+                                        <button class="btn btn-primary form-control-submit pull-xs-right" type="submit">Save</button>
+                                    </footer>
+                                </form>
+                            </section>
+                        </section>
+                        <footer class="page-footer"> 
+                            <!-- Footer content -->
+                        </footer>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>
