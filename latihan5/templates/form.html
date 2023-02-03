@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Pendaftaran Seminar Nasional</title>
+</head>
+<body>
+	<h2>Form Pendaftaran Seminar Nasional</h2>
+	<form method="post">
+		{{ form.nama.label }}<br>
+		{{ form.nama() }}<br>
+		{{ form.prodi.label }}<br>
+		{{ form.prodi() }}<br>
+		{{ form.nim.label }}<br>
+		{{ form.nim() }}<br>
+		{{ form.email.label }}<br>
+		{{ form.email() }}<br>
+		{{ form.nomor.label }}<br>
+		{{ form.nomor() }}<br>
+		{{ form.alamat.label }}<br>
+		{{ form.alamat() }}<br>
+		{{ form.jenisKelamin.label }}
+		{{ form.jenisKelamin() }}<br>
+		{{ form.agama.label }}<br>
+		{{ form.agama() }}
+		<p> {{ form.submit() }} </p>
+	</form>
+	<h5>Muhammad Ilham Z</h5>
+</body>
+</html>

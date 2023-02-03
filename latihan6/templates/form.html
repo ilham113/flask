@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Pendaftaran Seminar Nasional</title>
+</head>
+<body>
+	<h2>Form Pendaftaran Seminar Nasional</h2>
+	{% macro showerror(field) -%}
+		{% if errors %}
+			{% for t in errors %}
+				{% if field in t[0] %}
+					<span style="color: red; font-size: 12px">
+						{{ t[1][0] }}
+					</span>
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+	{%- endmacro %}
+	<form method="post">
+		{{ form.nama.label }}<br>
+		{{ form.nama() }} {{ showerror('nama') }}<br>
+		{{ form.prodi.label }}<br>
+		{{ form.prodi() }}<br>
+		{{ form.nim.label }}<br>
+		{{ form.nim() }}<br>
+		{{ form.email.label }}<br>
+		{{ form.email() }}{{ showerror('email') }}<br>
+		{{ form.nomor.label }}<br>
+		{{ form.nomor() }}<br>
+		{{ form.alamat.label }}<br>
+		{{ form.alamat() }}<br>
+		{{ form.jenisKelamin.label }}
+		{{ form.jenisKelamin() }}<br>
+		{{ form.agama.label }}<br>
+		{{ form.agama() }}
+		<p> {{ form.submit() }} </p>
+	</form>
+	<h5>Muhammad Ilham Z</h5>
+</body>
+</html>

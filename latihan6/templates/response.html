@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Pendaftaran Seminar Nasional</title>
+</head>
+<body>
+	<h2>Form Pendaftaran Seminar Nasional</h2>
+	<p>Pendaftaran Berhasil!!! </p>
+	<p>dengan data diri :</p>
+	<P>
+		Nama   			: {{ nama }}<br>
+		Prodi			: {{ prodi }}<br>
+		NIM				: {{ nim }}<br>
+		Email			: {{ email }}<br>
+		Nomor HP		: {{ nomor }}<br>
+		Alamat 			: {{ alamat }}<br>
+		Jenis Kelamin 	: 
+		{% if jenisKelamin=='P' %}
+			Pria
+		{% else %}
+			Wanita
+		{% endif %}<br>
+		Agama			:
+		{% if agama==1 %}
+			Islam 
+		{% elif agama==2 %}
+			Protestan
+		{% elif agama==3 %}
+			katolik
+		{% elif agama==4 %}
+			Hindu
+		{% else %}
+			Budha
+		{% endif %}
+		<br>
+		<h5>Muhammad Ilham Z</h5>
+</body>
+</html>

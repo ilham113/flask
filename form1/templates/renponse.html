@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM DENGAN WTForms</title>
+</head>
+<body>
+	<h2>FORM DENGAN WTForms</h2>
+	<h5>Muhammad Ilham Z</h5>
+	<p>Data yang di kirim adalah :</p>
+	<P>
+		Nama   			: {{ nama }}<br>
+		Alamat 			: {{ alamat }}<br>
+		Jenis Kelamin 	: 
+		{% if jenisKelamin=='P' %}
+			Pria
+		{% else %}
+			Wanita
+		{% endif %}<br>
+		Agama			:
+		{% if agama==1 %}
+			Islam 
+		{% elif agama==2 %}
+			Protestan
+		{% elif agama==3 %}
+			katolik
+		{% elif agama==4 %}
+			Hindu
+		{% else %}
+			Budha
+		{% endif %}
+		<br>
+		Hobi 			:
+		{% if hobi1==true %}
+			Menyanyi
+		{% endif %}
+		{% if hobi2==true %}
+			Olahraga
+		{% endif %}
+		{% if hobi3==true %}
+			Mancing
+		{% endif %}
+	</P>
+</body>
+</html>

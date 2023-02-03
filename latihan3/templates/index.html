@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Template Pertama</title>
+</head>
+<body>
+	<h2>CONTOH TEMPLATE PERTAMA </h2>
+	<h5>Muhammad Ilham </h5>
+<ul>
+	<li><p><strong>variabel</strong></p>
+	<p>
+		str_var = {{ str_var }} <br>
+		int_var = {{ int_var }} <br>
+		float_var = {{ float_var }}<br>
+		list_var =  {{ list_var }}<br>
+		dict_var = {{ dict_var }}<br>
+		model.hitungLuas() = {{ model.hitungLuas() }}<br>
+		model.hitungKeliling() = {{ model.hitungKeliling() }}<br>
+	</p></li>
+	<li><p><strong>operator</strong></p>
+	<p>
+		a = {{ a }}<br>
+		b = {{ b }}<br>
+		a + b = {{ a+b }}<br>
+		<br>
+		c = {{c}}<br>
+		{% if a==c %}
+			<p>Nilai A sama dengan C</p>
+		{% endif %}
+		<br>
+		{% if a == 20 and b == 30 %}
+			<p>Anda Benar</p>
+		{% endif %}
+	</p></li>
+	<li><p><strong>penugasan</strong></p>
+	{# Medefinisikan variabel A #}
+	{% set a = 10 %}
+	{# memanggil nilai variabel #}
+	<p>Nilai <strong>A</strong> = {{ a }}</p>
+	<br></li>
+	<li><p><strong>percabangan</strong></p>
+	Nilai a = {{a}}<br>
+	{% if a < 0 %}
+		{{a}}adalah bilangan Negatif.
+	{% elif a == 0 %}
+		{{a}}adalah sama dengan nol.
+	{% else %}
+		{{a}}adalah bilangan positif.
+	{% endif %}
+	<br></li>
+	<li><p><strong>perulangan</strong></p>
+	<ul>
+		{% for elemen in navigasi %}
+			<li><a href="{{ elemen[0]}}">{{ elemen[1]}}</a></li>
+		{% endfor %}
+	</ul></li>
+</ul>
+	<p><strong>dilarang copas</strong></p>
+</body>
+</html>
